@@ -1,0 +1,7 @@
+.results{
+    display: flex;
+    justify-content: center;
+}
+.pic{
+    padding: 10px;
+}
