@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>Last.Fm Scrobbler</h1>
 
-## Available Scripts
+<h3>Synopsis</h3>
+<p>This was a code concept that I developed for a start-up I was doing contract work for.</p>
+<p>A little bit of background: LastFm is a popular music streaming platform. Interestingly, LastFm does not stream music tracks from a database that they maintain (like Spotify does this). When a user listens to a track on LastFm, they often times are in fact listening to to a version of said track hosted on Youtube. This technically makes LastFm a relay service whith no concrete path for a user to easily purchase a track from some retailer.</p> 
+<p>This program solves that problem by pulling a user's currently playing track information and then uses it to querey Spotify to find their equivalant track entry so the user can locate it on that platform.</p>
+<p>I wrote this program using the React JavaScript Framework</p>
 
-In the project directory, you can run:
+<h3>Operation</h3>
+<p>This application requires an API key to LastFM and a Spotify OAuth token to operate</p>
+<p>The program makes an API call to get get the current playing track of a user on LastFM, it then obtains relevant information that it will use to make a seperate api call to Spotify that ideally wil return the correct track equivilant that can be used as a link to Spotify's platfrom</p>
 
-### `npm start`
+<h3>Current state of the app:</h3>
+<p>Due to the API key requirement of the app it will not function "out of the box" a blank 'keys' file where be added to the next version where a user will imput their own keys to see the app run. The app also has very light styling that wil be updated in the following versions</p>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3>TODO:</h3>
+<ul>
+  <li>Refactor code for the simple swapping of API keys</li>
+  <li>Styling</li>
+  <li>Recorded video and screenshots of the app in use</li>
+</ul>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
