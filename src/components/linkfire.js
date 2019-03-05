@@ -64,7 +64,7 @@ class Linkfire extends Component{
     
         return(
             <div>
-                <h1>Gethr Spotify Resource Grabber</h1>
+                
                 <div>
                     <h2>Data queried:</h2>
                     <hr/>
