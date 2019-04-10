@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
 import axios from 'axios'
+import { register } from '../serviceWorker';
 
 
-const LASTFM_API_KEY = 
+
 
 class Lastfm extends Component{
 
@@ -38,11 +40,15 @@ class Lastfm extends Component{
                 nowPlayingArtist: res.data.recenttracks.track[0].artist[`#text`]
             })
         })
+            
         
-
     }
-
+    
+    
     render(){
+        
+        this.props.updateInfo(this.state)
+
         return(
             <div>
                 <h1>LastFM to Spotify link translator</h1>
@@ -59,6 +65,14 @@ class Lastfm extends Component{
             </div>
         )
     }
-}  
+}
 
-export default Lastfm
+const mapDispatchToProps = (dispatch) => {
+    return{
+        updateInfo: (info) => {
+            dispatch({type: 'UPDATE', payload: info})
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Lastfm)

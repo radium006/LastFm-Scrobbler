@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
 import SpotifyWebApi from 'spotify-web-api-js';
 import './results.css'
 var spotifyApi = new SpotifyWebApi();
 
 class Linkfire extends Component{
-  //FOR THIS EXAMPLE WE WILL BE GETTING THE INFORMATION FOR "CHERRY", A SONG BY THE GROUP "CHROMATICS" FROM THEIR ALBUM 'CHERRY (DELUXE)' 
+    
     constructor(props){
         super(props);
         this.state = {
-            artistName:'cemetery', //
-            songName: 'fan and the bellows',
-            albumName: '',
+            
             results: {
                 result_songName: '',
                 result_albumName: '',
@@ -68,9 +67,9 @@ class Linkfire extends Component{
                 <div>
                     <h2>Data queried:</h2>
                     <hr/>
-                    <h3>Artist Name: {this.state.artistName}</h3>
-                    <h3>Song Name: {this.state.songName}</h3>
-                    <h3>Album Name: {this.state.albumName}</h3>
+                    <h3>Artist Name: {this.props.currentSongInfo.artistName}</h3>
+                    <h3>Song Name: {this.props.currentSongInfo.songName}</h3>
+                    <h3>Album Name: {this.props.currentSongInfo.albumName}</h3>
                 </div>
                 <div>
                     <h2>First result:</h2>
@@ -93,4 +92,10 @@ class Linkfire extends Component{
     }
 }
 
-export default Linkfire
+const mapStateToProps = (state) => {
+    return{
+        currentSongInfo: state
+    } 
+}
+
+export default connect(mapStateToProps, null)(Linkfire)
