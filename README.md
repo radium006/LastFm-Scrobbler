@@ -13,10 +13,4 @@
 <h3>Current state of the app:</h3>
 <p>Due to the API key requirement of the app it will not function "out of the box" a blank 'keys' file where be added to the next version where a user will imput their own keys to see the app run. The app also has very light styling that wil be updated in the following versions</p>
 
-<h3>TODO:</h3>
-<ul>
-  <li>Refactor code for the simple swapping of API keys</li>
-  <li>Styling</li>
-  <li>Recorded video and screenshots of the app in use</li>
-</ul>
 
